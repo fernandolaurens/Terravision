@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/party_bliss"
+    style="@style/SCREEN2"
     tools:context=".view.addproperty.AddPropertyActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -13,7 +13,7 @@
         android:layout_height="45sp"
         android:layout_marginStart="25sp"
         android:layout_marginTop="15sp"
-        android:background="@drawable/background_icon"
+        style="@style/Background_icon"
         android:padding="10sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -52,7 +52,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:background="@drawable/background_content_bottom"
+        android:background="@drawable/background_content_buttom_main"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageBack">
 
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:background="@drawable/background_content_bottom"
+            android:background="@drawable/background_content_buttom_main"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imageBack">
 
@@ -154,7 +154,8 @@
                     android:overScrollMode="always"
                     android:scrollbars="vertical"
                     android:textColor="@color/primary_dark"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColorHint="@color/black"/>
             </ScrollView>
 
             <ScrollView
@@ -184,7 +185,8 @@
                     android:overScrollMode="always"
                     android:scrollbars="vertical"
                     android:textColor="@color/primary_dark"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColorHint="@color/black"/>
             </ScrollView>
 
             <ScrollView
@@ -209,8 +211,7 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:background="@drawable/icon_surface"
-                            android:backgroundTint="@color/white" />
+                            android:background="@drawable/icon_surface" />
                         <EditText
                             style="@style/TextContent.BodyMedium.Gray"
                             android:layout_width="wrap_content"
@@ -220,9 +221,9 @@
                             android:layout_marginStart="2.5dp"
                             android:layout_gravity="center"
                             android:id="@+id/spec_surfaceArea"
-                            android:textColor="@color/white"
                             android:maxLines="1"
-                            android:textColorHint="@color/white" />
+                            android:backgroundTint="@color/black"
+                            />
                         <TextView
                             style="@style/TextContent.BodyMedium.Gray"
                             android:layout_width="wrap_content"
@@ -230,15 +231,13 @@
                             android:textSize="14sp"
                             android:layout_weight="1"
                             android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white"
-                            android:hint="m&#178;" />
+                            android:hint="m&#178;"
+                            android:textColorHint="@color/black"/>
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:background="@drawable/icon_bedroom"
-                            android:backgroundTint="@color/white" />
+                            android:background="@drawable/icon_bedroom" />
                         <EditText
                             style="@style/TextContent.BodyMedium.Gray"
                             android:layout_width="match_parent"
@@ -250,15 +249,14 @@
                             android:layout_marginStart="2.5dp"
                             android:layout_marginEnd="2.5dp"
                             android:id="@+id/spec_bedroom"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white"
+                            android:textColorHint="@color/black"
+                            android:backgroundTint="@color/black"
                             />
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:background="@drawable/icon_bathroom"
-                            android:backgroundTint="@color/white" />
+                            android:background="@drawable/icon_bathroom"/>
                         <EditText
                             style="@style/TextContent.BodyMedium.Gray"
                             android:layout_width="match_parent"
@@ -267,11 +265,10 @@
                             android:textSize="14sp"
                             android:layout_marginStart="2.5dp"
                             android:layout_marginEnd="2.5dp"
-                            android:textColor="@color/white"
                             android:layout_gravity="center"
                             android:maxLines="1"
-                            android:textColorHint="@color/white"
                             android:id="@+id/spec_bathroom"
+                            android:backgroundTint="@color/black"
                             />
                     </TableRow>
 
@@ -283,7 +280,6 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:background="@drawable/icon_building"
-                            android:backgroundTint="@color/white"
                             />
                         <EditText
                             style="@style/TextContent.BodyMedium.Gray"
@@ -293,11 +289,10 @@
                             android:textSize="14sp"
                             android:layout_marginStart="2.5dp"
                             android:layout_marginEnd="2.5dp"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white"
+                            android:textColorHint="@color/black"
                             android:maxLines="1"
                             android:id="@+id/spec_buildingArea"
+                            android:backgroundTint="@color/black"
                             />
                         <TextView
                             style="@style/TextContent.BodyMedium.Gray"
@@ -306,39 +301,36 @@
                             android:textSize="14sp"
                             android:layout_weight="1"
                             android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white"
+                            android:textColorHint="@color/black"
                             android:hint="m&#178;" />
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:background="@drawable/icon_stairs"
-                            android:backgroundTint="@color/white"
                             />
                         <EditText
                             style="@style/TextContent.BodyMedium.Gray"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textColor="@color/white"
                             android:layout_gravity="center"
                             android:textSize="14sp"
                             android:layout_marginStart="2.5dp"
                             android:layout_marginEnd="2.5dp"
                             android:maxLines="1"
                             android:id="@+id/spec_floor"
-                            android:textColorHint="@color/white" />
+                            android:textColorHint="@color/black"
+                            android:backgroundTint="@color/black"
+                            />
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:background="@drawable/icon_calendar"
-                            android:backgroundTint="@color/white" />
+                            android:background="@drawable/icon_calendar" />
                         <EditText
                             style="@style/TextContent.BodyMedium.Gray"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/white"
                             android:layout_weight="1"
                             android:layout_gravity="center"
                             android:textSize="14sp"
@@ -346,8 +338,8 @@
                             android:layout_marginEnd="2.5dp"
                             android:id="@+id/spec_year"
                             android:maxLines="1"
-                            android:textColorHint="@color/white"
-                            />
+                            android:textColorHint="@color/black"
+                            android:backgroundTint="@color/black" />
                     </TableRow>
                 </TableLayout>
             </ScrollView>
@@ -379,7 +371,8 @@
                     android:overScrollMode="always"
                     android:scrollbars="vertical"
                     android:textColor="@color/primary_dark"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColorHint="@color/black"/>
             </ScrollView>
 
             <ProgressBar

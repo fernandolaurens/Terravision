@@ -23,6 +23,9 @@
     <style name="SCREEN2">
         <item name="android:background">@color/primary_dark</item>
     </style>
+    <style name="Background_icon">
+        <item name="android:background">@drawable/background_button</item>
+    </style>
     <style name="SCREEN_Navigasi">
         <item name="android:background">@drawable/background_sent_message_dark</item>
     </style>

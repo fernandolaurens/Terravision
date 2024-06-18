@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.dicoding.picodiploma.loginwithanimation.data.BuildingRepository
+import com.dicoding.picodiploma.loginwithanimation.data.SettingsRepository
 import com.dicoding.picodiploma.loginwithanimation.data.pref.UserModel
 import com.dicoding.picodiploma.loginwithanimation.data.response.DataItem
 import com.dicoding.picodiploma.loginwithanimation.data.response.ListBuildingItem
@@ -15,7 +16,10 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val repository: BuildingRepository) : ViewModel() {
+class MainViewModel(
+    private val buildingRepository: BuildingRepository,
+    private val settingsRepository: SettingsRepository
+) : ViewModel() {
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
@@ -35,20 +39,22 @@ class MainViewModel(private val repository: BuildingRepository) : ViewModel() {
     private val _searchResults = MutableLiveData<List<DataItem>>()
     val searchResults: LiveData<List<DataItem>> get() = _searchResults
 
+    val isDarkMode: LiveData<Boolean> = settingsRepository.isDarkMode
+
     init {
         loadUserSession()
         loadBuildingsPaging()
     }
 
     fun getSession(): LiveData<UserModel> {
-        return repository.getSession().asLiveData()
+        return buildingRepository.getSession().asLiveData()
     }
 
     fun fetchBuildings() {
         _isLoading.value = true
         viewModelScope.launch {
             try {
-                val response = repository.getBuilding()
+                val response = buildingRepository.getBuilding()
                 if (response.error == false && response.data != null) {
                     _buildings.value = response.data.filterNotNull()
                 } else {
@@ -64,7 +70,7 @@ class MainViewModel(private val repository: BuildingRepository) : ViewModel() {
 
     private fun loadUserSession() {
         viewModelScope.launch {
-            _userSession.value = repository.getSession().firstOrNull()
+            _userSession.value = buildingRepository.getSession().firstOrNull()
         }
     }
 
@@ -72,7 +78,7 @@ class MainViewModel(private val repository: BuildingRepository) : ViewModel() {
         _isLoading.value = true
         viewModelScope.launch {
             try {
-                val response = repository.getSearch(keyword)
+                val response = buildingRepository.getSearch(keyword)
                 if (response.error == false && response.data != null) {
                     _searchResults.value = response.data.filterNotNull()
                 } else {
@@ -88,7 +94,7 @@ class MainViewModel(private val repository: BuildingRepository) : ViewModel() {
 
     private fun loadBuildingsPaging() {
         viewModelScope.launch {
-            repository.getBuildings()
+            buildingRepository.getBuildings()
                 .cachedIn(viewModelScope)
                 .collectLatest { pagingData ->
                     _buildingsPagingData.value = pagingData
@@ -96,4 +102,7 @@ class MainViewModel(private val repository: BuildingRepository) : ViewModel() {
         }
     }
 
+    fun setDarkMode(isDarkMode: Boolean) {
+        settingsRepository.setDarkMode(isDarkMode)
+    }
 }

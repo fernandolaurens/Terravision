@@ -3,6 +3,7 @@ package com.dicoding.picodiploma.loginwithanimation.di
 import android.app.Application
 import android.content.Context
 import com.dicoding.picodiploma.loginwithanimation.data.BuildingRepository
+import com.dicoding.picodiploma.loginwithanimation.data.SettingsRepository
 import com.dicoding.picodiploma.loginwithanimation.data.UserRepository
 import com.dicoding.picodiploma.loginwithanimation.data.api.ApiConfig
 import com.dicoding.picodiploma.loginwithanimation.data.lokal.pagging.BuildingsDatabase
@@ -24,5 +25,8 @@ object Injection {
         val apiService = ApiConfig.getApiService(user.accessToken)
         val database = BuildingsDatabase.getDatabase(context)
         return BuildingRepository.getInstance(pref, apiService, database)
+    }
+    fun provideSettingsRepository(context: Context): SettingsRepository {
+        return SettingsRepository(context)
     }
 }

@@ -2,9 +2,7 @@ package com.dicoding.picodiploma.loginwithanimation.view.main
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.transition.TransitionInflater
@@ -40,10 +38,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private lateinit var progressBar: ProgressBar
     private lateinit var aiAdapter: AiAdapter
     private lateinit var labelAdapter: LabelAdapter
-    private lateinit var sharedPreferences: SharedPreferences
 
-
-    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -52,14 +47,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(this)
         binding.bottomNavigationView.selectedItemId = R.id.btn_home
 
-        sharedPreferences = getSharedPreferences("user_preferences", MODE_PRIVATE)
-        val isDarkMode = sharedPreferences.getBoolean("DARK_MODE", false)
-        setDarkMode(isDarkMode)
-
         progressBar = binding.progressBar2
-//        searchBar = binding.searchBar
-//        searchView = binding.searchView
-//        searchRecyclerView = binding.searchView.findViewById(R.id.searchRecyclerView)
 
         viewModel.getSession().observe(this) { user ->
             if (user == null || !user.isLogin) {
@@ -96,8 +84,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             }
         }
 
-
-
         setupView()
         setupRecyclerView()
         setupAction()
@@ -117,7 +103,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         viewModel.buildingsPagingData.observe(this) { pagingData ->
             adapter.submitData(lifecycle, pagingData)
-//            sendBuildingsDataToWidget()
         }
 
         viewModel.searchResults.observe(this) { searchResults ->
@@ -136,6 +121,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 val error = (loadState.refresh as LoadState.Error).error
                 Log.e("MainActivity", "Error loading data: ${error.message}")
             }
+        }
+
+        viewModel.isDarkMode.observe(this) { isDarkMode ->
+            setDarkMode(isDarkMode)
         }
 
         window.sharedElementEnterTransition = TransitionInflater.from(this).inflateTransition(android.R.transition.move)
@@ -158,9 +147,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private fun setupRecyclerView() {
         adapter = BuildingsAdapter()
         binding.usersRecycleView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-//        binding.usersRecycleView.addItemDecoration(
-//            DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL)
-//        )
         binding.usersRecycleView.adapter = adapter.withLoadStateFooter(
             footer = LoadingStateAdapter {
                 adapter.retry()
@@ -190,10 +176,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             finish()
         }
         binding.actionDarkmode.setOnClickListener {
-            toggleDarkMode(true)
+            viewModel.setDarkMode(true)
         }
         binding.actionOffdarkmode.setOnClickListener {
-            toggleDarkMode(false)
+            viewModel.setDarkMode(false)
         }
     }
 
@@ -217,11 +203,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             binding.actionDarkmode.visibility = View.VISIBLE
             binding.actionOffdarkmode.visibility = View.GONE
         }
-    }
-
-    private fun toggleDarkMode(enable: Boolean) {
-        sharedPreferences.edit().putBoolean("DARK_MODE", enable).apply()
-        setDarkMode(enable)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
