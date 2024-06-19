@@ -35,7 +35,7 @@
             android:layout_marginEnd="28sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The Prices"
+            android:text="@string/the_prices"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -46,7 +46,7 @@
             android:layout_marginEnd="28sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="of your new house!"
+            android:text="@string/of_your_new_house"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="500.000.000"
+            android:text="@string/property_price"
             android:textSize="25sp"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="KPR"
+                android:text="@string/kpr"
                 style="@style/TEXT_Profile"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -125,7 +125,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_gravity="center_vertical"
                         android:textSize="14sp"
-                        android:text="Property Prices"
+                        android:text="@string/property_prices"
                         android:textColor="@color/black"/>
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
@@ -137,7 +137,7 @@
                         android:textColor="@color/black"
                         android:layout_marginEnd="5dp"
                         android:textColorHint="@color/black"
-                        android:hint="Rp" />
+                        android:hint="@string/currency_symbol" />
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="wrap_content"
@@ -146,7 +146,7 @@
                         android:textSize="14sp"
                         android:layout_gravity="center"
                         android:id="@+id/tvResult"
-                        android:text="500.000.000" />
+                        android:text="@string/property_price_value" />
                 </TableRow>
                 <TableRow
                     android:layout_width="wrap_content"
@@ -167,7 +167,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_gravity="center_vertical"
                         android:textSize="14sp"
-                        android:text="Down Payment"
+                        android:text="@string/down_payment"
                         android:textColor="@color/black"/>
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
@@ -179,7 +179,7 @@
                         android:textColor="@color/black"
                         android:layout_marginEnd="5dp"
                         android:textColorHint="@color/black"
-                        android:hint="Rp" />
+                        android:hint="@string/currency_symbol" />
                     <EditText
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="wrap_content"
@@ -188,7 +188,7 @@
                         android:textSize="14sp"
                         android:layout_gravity="center"
                         android:id="@+id/ed_UangMuka"
-                        android:text="xx.xxx.xxx" />
+                        android:text="@string/down_payment_value" />
                 </TableRow>
                 <TableRow
                     android:layout_width="wrap_content"
@@ -209,7 +209,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_gravity="center_vertical"
                         android:textSize="14sp"
-                        android:text="Credit Tenor"
+                        android:text="@string/credit_tenor"
                         android:textColor="@color/black"/>
                     <EditText
                         style="@style/TextContent.BodyMedium.Gray"
@@ -219,7 +219,7 @@
                         android:textSize="14sp"
                         android:layout_gravity="center"
                         android:id="@+id/ed_kredit"
-                        android:text="xx" />
+                        android:text="@string/credit_tenor_value" />
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="wrap_content"
@@ -229,7 +229,7 @@
                         android:layout_gravity="center_vertical"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
-                        android:hint="/Tahun" />
+                        android:hint="@string/year" />
                 </TableRow>
                 <TableRow
                     android:layout_width="wrap_content"
@@ -250,7 +250,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="15dp"
                         android:layout_marginEnd="16dp"
-                        android:text="Interest Rate"
+                        android:text="@string/interest_rate"
                         android:textSize="14sp"
                         android:textColor="@color/black"/>
 
@@ -262,7 +262,7 @@
                         android:textSize="14sp"
                         android:layout_gravity="center"
                         android:id="@+id/ed_sukubunga"
-                        android:text="x" />
+                        android:text="@string/interest_rate_value" />
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="wrap_content"
@@ -272,7 +272,7 @@
                         android:layout_gravity="center_vertical"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
-                        android:hint="%" />
+                        android:hint="@string/percent" />
                 </TableRow>
             </TableLayout>
 
@@ -283,7 +283,7 @@
                 style="@style/Btn_picture"
                 android:layout_marginTop="280dp"
                 android:layout_gravity="center_horizontal"
-                android:text="Submit"
+                android:text="@string/submit"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -298,7 +298,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Result"
+                android:text="@string/result"
                 style="@style/TEXT_Profile"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -334,7 +334,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="15dp"
                         android:layout_marginEnd="16dp"
-                        android:text="instalment"
+                        android:text="@string/instalment"
                         android:textSize="14sp"
                         android:textColor="@color/black"/>
 
@@ -345,7 +345,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="x.xxx.xxx"
+                        android:text="@string/instalment_value"
                         android:textSize="14sp" />
 
                     <TextView
@@ -354,7 +354,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:hint="/Bulan"
+                        android:hint="@string/month"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:textSize="14sp" />

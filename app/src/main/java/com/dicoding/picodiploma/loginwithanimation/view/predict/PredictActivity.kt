@@ -19,7 +19,7 @@ class PredictActivity : AppCompatActivity() {
 
         result = intent.getStringExtra("PREDICTION_RESULT")
         result?.let {
-            val formattedResult = formatUang(it.toDouble() * 1000)
+            val formattedResult = formatUang(it.toDouble() * 10000)
             binding.tvResult.text = formattedResult
             binding.tvResult2.text = formattedResult
         }

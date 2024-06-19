@@ -41,7 +41,7 @@
                 android:id="@+id/profile_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/name"
+                android:text="@string/profile_name"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:layout_marginTop="5dp"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:inputType="number"
-                android:text="@string/email"
+                android:text="@string/profile_email"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:inputType="number"
-                android:text="role"
+                android:text="@string/profile_role"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -138,7 +138,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="10dp"
-                            android:text="Favorite"
+                            android:text="@string/favorite"
                             style="@style/TEXT_Profile"
                             android:textSize="18sp" />
                     </TableRow>
@@ -169,7 +169,7 @@
                             android:textSize="18sp"
                             style="@style/TEXT_Profile"
                             android:textStyle="bold"
-                            android:text="Log out"
+                            android:text="@string/log_out"
                             />
                     </TableRow>
                 </TableLayout>
@@ -185,21 +185,19 @@
                     android:visibility="gone"/>
             </FrameLayout>
 
-
-
             <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp">
-                    <com.google.android.material.bottomnavigation.BottomNavigationView
-                        android:id="@+id/bottomNavigationView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/SCREEN_Navigasi"
-                        app:labelVisibilityMode="labeled"
-                        app:menu="@menu/bottom_menu"
-                        android:layout_gravity="bottom"/>
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottomNavigationView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SCREEN_Navigasi"
+                    app:labelVisibilityMode="labeled"
+                    app:menu="@menu/bottom_menu"
+                    android:layout_gravity="bottom"/>
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

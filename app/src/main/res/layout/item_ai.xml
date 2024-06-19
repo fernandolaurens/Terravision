@@ -35,7 +35,7 @@
                     android:id="@+id/ai_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Park Avenue"
+                    android:text="@string/ai_title"
                     android:textColor="@android:color/white"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -45,7 +45,7 @@
                     android:id="@+id/ai_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jakarta Barat"
+                    android:text="@string/ai_location"
                     android:textColor="@android:color/white"
                     android:textSize="14sp"
                     android:background="@android:color/transparent" />

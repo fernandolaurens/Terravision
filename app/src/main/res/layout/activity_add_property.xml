@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -36,7 +35,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Property"
+        android:text="@string/add_property"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -147,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:gravity="top|start"
-                    android:hint="Name..."
+                    android:hint="@string/name_hint"
                     android:inputType="textMultiLine"
                     android:lines="1"
                     android:maxLines="2"
@@ -178,7 +177,7 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:gravity="top|start"
-                    android:hint="Location..."
+                    android:hint="@string/location_hint"
                     android:inputType="textMultiLine"
                     android:lines="1"
                     android:maxLines="2"
@@ -224,6 +223,7 @@
                             android:id="@+id/spec_surfaceArea"
                             android:maxLines="1"
                             android:backgroundTint="@color/black"
+                            android:hint="@string/surface_area_hint"
                             />
                         <TextView
                             style="@style/TextContent.BodyMedium.Gray"
@@ -252,6 +252,7 @@
                             android:id="@+id/spec_bedroom"
                             android:textColorHint="@color/black"
                             android:backgroundTint="@color/black"
+                            android:hint="@string/bedroom_hint"
                             />
 
                         <ImageView
@@ -270,6 +271,7 @@
                             android:maxLines="1"
                             android:id="@+id/spec_bathroom"
                             android:backgroundTint="@color/black"
+                            android:hint="@string/bathroom_hint"
                             />
                     </TableRow>
 
@@ -294,6 +296,7 @@
                             android:maxLines="1"
                             android:id="@+id/spec_buildingArea"
                             android:backgroundTint="@color/black"
+                            android:hint="@string/building_area_hint"
                             />
                         <TextView
                             style="@style/TextContent.BodyMedium.Gray"
@@ -323,6 +326,7 @@
                             android:id="@+id/spec_floor"
                             android:textColorHint="@color/black"
                             android:backgroundTint="@color/black"
+                            android:hint="@string/floor_hint"
                             />
                         <ImageView
                             android:layout_width="30dp"
@@ -340,7 +344,8 @@
                             android:id="@+id/spec_year"
                             android:maxLines="1"
                             android:textColorHint="@color/black"
-                            android:backgroundTint="@color/black" />
+                            android:backgroundTint="@color/black"
+                            android:hint="@string/year_hint" />
                     </TableRow>
                 </TableLayout>
             </ScrollView>
@@ -364,7 +369,7 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:gravity="top|start"
-                    android:hint="Description..."
+                    android:hint="@string/description_hint"
                     android:inputType="textMultiLine"
                     android:lines="8"
                     android:maxLines="10"

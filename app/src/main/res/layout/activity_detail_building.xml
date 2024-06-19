@@ -33,7 +33,7 @@
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:visibility="visible"
-                    android:text="Initializing model, please wait..."
+                    android:text="@string/initializing_model"
                     android:layout_marginTop="70dp" />
                 <TextView
                     android:id="@+id/textViewNotification2"
@@ -42,7 +42,7 @@
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:visibility="visible"
-                    android:text="Don't Go Back !!"
+                    android:text="@string/dont_go_back"
                     android:layout_marginTop="90dp" />
 
                 <ProgressBar
@@ -69,7 +69,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            android:text="Building Name"
+            android:text="@string/building_name"
             android:textSize="32sp" />
         <TextView
             style="@style/TextContent.TitleMedium.Bold.MarginLeftRight"
@@ -81,7 +81,7 @@
             android:layout_marginBottom="16dp"
             android:textColor="@color/white"
             android:id="@+id/text_location"
-            android:text="Location"
+            android:text="@string/location"
             android:textSize="18sp"
             android:textStyle="bold" />
         <TextView
@@ -130,7 +130,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginStart="15dp"
                         android:layout_gravity="center_vertical"
-                        android:text="Surface Area" />
+                        android:text="@string/surface_area" />
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="wrap_content"
@@ -172,7 +172,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_gravity="center_vertical"
                         android:textSize="14sp"
-                        android:text="Building Area" />
+                        android:text="@string/building_area" />
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="wrap_content"
@@ -213,7 +213,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="15dp"
                         android:textSize="14sp"
-                        android:text="Bedroom" />
+                        android:text="@string/bedroom" />
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="match_parent"
@@ -245,7 +245,7 @@
                         android:layout_gravity="center_vertical"
                         android:textColor="@color/white"
                         android:textSize="14sp"
-                        android:text="Bathroom" />
+                        android:text="@string/bathroom" />
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="match_parent"
@@ -277,7 +277,7 @@
                         android:layout_gravity="center_vertical"
                         android:textSize="14sp"
                         android:textColor="@color/white"
-                        android:text="Floor" />
+                        android:text="@string/floor" />
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="match_parent"
@@ -309,7 +309,7 @@
                         android:layout_gravity="center_vertical"
                         android:textSize="14sp"
                         android:textColor="@color/white"
-                        android:text="Year" />
+                        android:text="@string/year" />
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="match_parent"
@@ -357,7 +357,7 @@
                     android:gravity="center_vertical"
                     android:textColor="@color/white"
                     android:layout_toEndOf="@id/image_kontak"
-                    android:text="Rianco Aritonang" />
+                    android:text="@string/contact_name" />
                 <TextView
                     android:id="@+id/text_kontak"
                     style="@style/TextContent.BodyMedium.Gray"
@@ -369,7 +369,7 @@
                     android:layout_marginTop="28dp"
                     android:textColor="@color/white"
                     android:layout_toEndOf="@id/image_kontak"
-                    android:text="Aritonang@gmail.com" />
+                    android:text="@string/contact_email" />
             </RelativeLayout>
 
             <LinearLayout
@@ -384,7 +384,7 @@
                 <Button
                     style="@style/price_predict"
                     android:id="@+id/btn_predict"
-                    android:text="Price Predict"
+                    android:text="@string/price_predict"
                     android:textColor="@color/white"
                     android:layout_width="0dp"
                     android:layout_height="60dp"
