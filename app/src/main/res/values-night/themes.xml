@@ -42,11 +42,22 @@
         <item name="android:textColor">@color/purple_200</item>
     </style>
     <style name="Btn_picture">
-        <item name="android:textColor">@color/purple_200</item>
+        <item name="android:backgroundTint">@color/purple_200</item>
     </style>
     <style name="icon">
         <item name="android:background">@drawable/ic_favorite_dark</item>
     </style>
+    <style name="background_content_bottom">
+        <item name="android:background">@drawable/background_content_bottom_dark</item>
+    </style>
+    <style name="header_content">
+        <item name="android:background">@color/purple_200</item>
+    </style>
+    <style name="price_predict">
+        <item name="android:backgroundTint">@color/purple_200</item>
+    </style>
+
+
 
 
     <style name="ThemeOverlay.MyStackWidget.AppWidgetContainer" parent="">

@@ -45,10 +45,19 @@
         <item name="android:textColor">@color/party_bliss2</item>
     </style>
     <style name="Btn_picture">
-        <item name="android:textColor">@color/party_bliss2</item>
+        <item name="android:backgroundTint">@color/party_bliss2</item>
     </style>
     <style name="icon">
         <item name="android:background">@drawable/ic_favorite</item>
+    </style>
+    <style name="background_content_bottom">
+        <item name="android:background">@drawable/background_content_bottom</item>
+    </style>
+    <style name="header_content">
+        <item name="android:background">@color/party_bliss</item>
+    </style>
+    <style name="price_predict">
+        <item name="android:backgroundTint">@color/party_bliss</item>
     </style>
 
 
