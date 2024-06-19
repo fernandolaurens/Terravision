@@ -125,7 +125,8 @@
                         android:layout_marginStart="15dp"
                         android:layout_gravity="center_vertical"
                         android:textSize="14sp"
-                        android:text="Property Prices" />
+                        android:text="Property Prices"
+                        android:textColor="@color/black"/>
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="wrap_content"
@@ -166,7 +167,8 @@
                         android:layout_marginStart="15dp"
                         android:layout_gravity="center_vertical"
                         android:textSize="14sp"
-                        android:text="Down Payment" />
+                        android:text="Down Payment"
+                        android:textColor="@color/black"/>
                     <TextView
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="wrap_content"
@@ -207,7 +209,8 @@
                         android:layout_marginStart="15dp"
                         android:layout_gravity="center_vertical"
                         android:textSize="14sp"
-                        android:text="Credit Tenor" />
+                        android:text="Credit Tenor"
+                        android:textColor="@color/black"/>
                     <EditText
                         style="@style/TextContent.BodyMedium.Gray"
                         android:layout_width="wrap_content"
@@ -248,7 +251,8 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginEnd="16dp"
                         android:text="Interest Rate"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
 
                     <EditText
                         style="@style/TextContent.BodyMedium.Gray"
@@ -331,7 +335,8 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginEnd="16dp"
                         android:text="instalment"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:id="@+id/ed_cicilan"

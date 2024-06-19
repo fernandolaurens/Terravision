@@ -29,7 +29,7 @@ class PredictActivity : AppCompatActivity() {
 
     private fun setupAction() {
         binding.btnPredict.setOnClickListener {
-            val hargaProperti = result?.toDoubleOrNull()?.times(1000) ?: 0.0
+            val hargaProperti = result?.toDoubleOrNull()?.times(10000) ?: 0.0
             val tenorKredit = binding.edKredit.text.toString().toIntOrNull() ?: 0
             val sukuBungaTahunan = binding.edSukubunga.text.toString().toDoubleOrNull() ?: 0.0
             val uangMuka = binding.edUangMuka.text.toString().toDoubleOrNull() ?: 0.0
