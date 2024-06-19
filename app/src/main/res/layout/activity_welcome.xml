@@ -23,33 +23,6 @@
         android:alpha="0"
         tools:alpha="100"/>
 
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/action_darkmode"
-        android:padding="8dp"
-        android:layout_width="45sp"
-        android:layout_height="45sp"
-        android:layout_marginStart="28sp"
-        android:layout_marginTop="20sp"
-        android:src="@drawable/baseline_dark_mode_24"
-        android:background="@color/party_bliss2"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:riv_corner_radius="8sp"/>
-
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/action_Offdarkmode"
-        android:padding="8dp"
-        android:layout_width="45sp"
-        android:layout_height="45sp"
-        android:layout_marginStart="28sp"
-        android:layout_marginTop="20sp"
-        android:src="@drawable/white_mode"
-        android:background="@color/party_bliss2"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:riv_corner_radius="8sp"/>
 
     <ImageView
         android:id="@+id/imageView"

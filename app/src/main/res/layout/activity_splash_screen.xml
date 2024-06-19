@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8F7FE"
+    android:background="#FEFFFF"
     tools:context=".view.splash.SplashScreenActivity">
 
     <ImageView
@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/splesh"/>
+        android:background="@drawable/splash"/>
 
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -40,6 +40,6 @@
         android:fontFamily="@font/boldd"
         android:textSize="15dp"
         android:gravity="center"
-        style="@style/TEXT"/>
+        android:textColor="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

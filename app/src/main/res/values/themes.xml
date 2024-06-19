@@ -27,7 +27,7 @@
         <item name="android:background">@color/party_bliss2</item>
     </style>
     <style name="Background_icon">
-        <item name="android:background">@drawable/background_button_dark</item>
+        <item name="android:background">@drawable/background_icon_dark</item>
     </style>
     <style name="SCREEN_Navigasi">
         <item name="android:background">@drawable/background_sent_message</item>
@@ -38,6 +38,20 @@
     <style name="TEXT2">
         <item name="android:textColor">@color/party_bliss2</item>
     </style>
+    <style name="TEXT_Profile">
+        <item name="android:textColor">@color/party_bliss2</item>
+    </style>
+    <style name="TEXT_lokasi">
+        <item name="android:textColor">@color/party_bliss2</item>
+    </style>
+    <style name="Btn_picture">
+        <item name="android:textColor">@color/party_bliss2</item>
+    </style>
+    <style name="icon">
+        <item name="android:background">@drawable/ic_favorite</item>
+    </style>
+
+
 
     <style name="Rounded">
         <item name="cornerSize">5%</item>

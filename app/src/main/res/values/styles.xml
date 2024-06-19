@@ -17,4 +17,7 @@
     <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/party_bliss2</item>
     </style>
+    <style name="BottomNavigationView.Dark" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/white</item>
+    </style>
 </resources>

@@ -28,7 +28,6 @@ class WelcomeActivity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("user_preferences", MODE_PRIVATE)
         val isDarkMode = sharedPreferences.getBoolean("DARK_MODE", false)
-        setDarkMode(isDarkMode)
 
         setupView()
         setupAction()
@@ -67,32 +66,10 @@ class WelcomeActivity : AppCompatActivity() {
         binding.actionLanguage.setOnClickListener {
             startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
         }
-
-        binding.actionDarkmode.setOnClickListener {
-            toggleDarkMode(true)
-        }
-
-        binding.actionOffdarkmode.setOnClickListener {
-            toggleDarkMode(false)
-        }
     }
 
-    private fun setDarkMode(isDarkMode: Boolean) {
-        if (isDarkMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            binding.actionDarkmode.visibility = View.GONE
-            binding.actionOffdarkmode.visibility = View.VISIBLE
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            binding.actionDarkmode.visibility = View.VISIBLE
-            binding.actionOffdarkmode.visibility = View.GONE
-        }
-    }
 
-    private fun toggleDarkMode(enable: Boolean) {
-        sharedPreferences.edit().putBoolean("DARK_MODE", enable).apply()
-        setDarkMode(enable)
-    }
+
 
     private fun playAnimation() {
         ObjectAnimator.ofFloat(binding.imageView, View.TRANSLATION_X, -30f, 30f).apply {

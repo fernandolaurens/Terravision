@@ -10,7 +10,7 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/party_bliss2</item>
+        <item name="android:statusBarColor">@color/purple_200</item>
         <item name="android:progressBarStyle">@style/ProgressBar</item>
     </style>
     <style name="Rounded">
@@ -24,7 +24,7 @@
         <item name="android:background">@color/primary_dark</item>
     </style>
     <style name="Background_icon">
-        <item name="android:background">@drawable/background_button</item>
+        <item name="android:background">@drawable/background_icon_dark2</item>
     </style>
     <style name="SCREEN_Navigasi">
         <item name="android:background">@drawable/background_sent_message_dark</item>
@@ -35,6 +35,19 @@
     <style name="TEXT2">
         <item name="android:textColor">@color/party_bliss2</item>
     </style>
+    <style name="TEXT_lokasi">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TEXT_Profile">
+        <item name="android:textColor">@color/purple_200</item>
+    </style>
+    <style name="Btn_picture">
+        <item name="android:textColor">@color/purple_200</item>
+    </style>
+    <style name="icon">
+        <item name="android:background">@drawable/ic_favorite_dark</item>
+    </style>
+
 
     <style name="ThemeOverlay.MyStackWidget.AppWidgetContainer" parent="">
         <item name="appWidgetBackgroundColor">@color/light_blue_600</item>

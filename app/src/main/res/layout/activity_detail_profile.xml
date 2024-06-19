@@ -129,17 +129,17 @@
                             android:layout_height="30dp"
                             android:layout_marginStart="24dp"
                             android:layout_gravity="center_vertical"
-                            android:src="@drawable/ic_favorite"
+                            style="@style/icon"
                             />
 
                         <TextView
-                            style="@style/TextContent.BodyMedium.Bold"
+                            android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="10dp"
                             android:text="Favorite"
-                            android:textColor="@color/party_bliss2"
+                            style="@style/TEXT_Profile"
                             android:textSize="18sp" />
                     </TableRow>
                 </TableLayout>
@@ -155,21 +155,6 @@
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     tools:listitem="@layout/item_savebuilding"/>
 
-<!--                <com.makeramen.roundedimageview.RoundedImageView-->
-<!--                    android:id="@+id/btn_signOut"-->
-<!--                    android:layout_width="45sp"-->
-<!--                    android:layout_height="45sp"-->
-<!--                    android:layout_marginTop="150dp"-->
-<!--                    android:layout_marginEnd="30sp"-->
-<!--                    android:padding="8dp"-->
-<!--                    android:layout_gravity="center||right"-->
-<!--                    android:scaleType="centerCrop"-->
-<!--                    android:src="@drawable/ic_baseline_logout_24"-->
-<!--                    app:layout_constraintBottom_toBottomOf="@+id/background_top"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:riv_corner_radius="8sp" />-->
-
                 <TableLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -182,7 +167,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:textSize="14sp"
-                            android:textColor="@color/party_bliss2"
+                            style="TEXT_Profile"
+                            android:textStyle="bold"
                             android:text="Log out" />
                     </TableRow>
                 </TableLayout>
