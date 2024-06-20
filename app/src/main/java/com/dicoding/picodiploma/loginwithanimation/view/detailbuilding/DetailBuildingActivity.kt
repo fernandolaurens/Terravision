@@ -199,6 +199,13 @@ class DetailBuildingActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
+    private fun isValidLocation(location: String): Boolean {
+        return when (location) {
+            "Bandung", "Bekasi", "Bogor", "Depok", "JAKSEL", "Jakarta Barat", "Jakarta Pusat", "Jakarta Selatan", "Jakarta Timur", "Jakarta Utara" -> true
+            else -> false
+        }
+    }
+
     private fun setupAction() {
         binding.btnFav.setOnClickListener {
             detailViewModel.buildingDetail.value?.let { building ->
@@ -206,14 +213,30 @@ class DetailBuildingActivity : AppCompatActivity() {
             }
         }
         binding.btnPredict.setOnClickListener {
-            if (predictionHelper.isInterpreterInitialized()) {
-                makePrediction()
-            } else {
-                showLoading(true)
-                predictionHelper.initializeTfLite()
-                Toast.makeText(this, "Model belum selesai dimuat, tunggu beberapa saat.", Toast.LENGTH_SHORT).show()
-                Log.d("DetailBuildingActivity", "Model belum selesai dimuat, tunggu beberapa saat.")
-                startNotificationTimer()
+            val buildingResponse = detailViewModel.buildingDetail.value
+            if (buildingResponse != null) {
+                val location = buildingResponse.location ?: ""
+                if (!isValidLocation(location)) {
+                    Toast.makeText(this, "Lokasi belum support AI prediction", Toast.LENGTH_SHORT)
+                        .show()
+                    return@setOnClickListener
+                }
+                if (predictionHelper.isInterpreterInitialized()) {
+                    makePrediction()
+                } else {
+                    showLoading(true)
+                    predictionHelper.initializeTfLite()
+                    Toast.makeText(
+                        this,
+                        "Model belum selesai dimuat, tunggu beberapa saat.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    Log.d(
+                        "DetailBuildingActivity",
+                        "Model belum selesai dimuat, tunggu beberapa saat."
+                    )
+                    startNotificationTimer()
+                }
             }
         }
     }
@@ -226,6 +249,11 @@ class DetailBuildingActivity : AppCompatActivity() {
             val buildingArea = buildingResponse.buildingArea ?: ""
             val landArea = buildingResponse.landArea ?: ""
             val location = buildingResponse.location ?: ""
+
+            Log.d(
+                "DetailBuildingActivity",
+                "Making prediction with details: Bathroom: $bathroom, Bedroom: $bedroom, Building Area: $buildingArea, Land Area: $landArea, Location: $location"
+            )
             predictionHelper.predict(bathroom, bedroom, buildingArea, landArea, location)
         }
     }
