@@ -2,7 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TerraVision" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/capstone_project_final" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/capstone_project_final/capstone_project_final" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/capstone_project_final/TerraVision" vcs="Git" />
   </component>
 </project>

@@ -223,7 +223,7 @@
                             android:id="@+id/spec_surfaceArea"
                             android:maxLines="1"
                             android:backgroundTint="@color/black"
-                            android:hint="@string/surface_area_hint"
+
                             />
                         <TextView
                             style="@style/TextContent.BodyMedium.Gray"
@@ -252,7 +252,7 @@
                             android:id="@+id/spec_bedroom"
                             android:textColorHint="@color/black"
                             android:backgroundTint="@color/black"
-                            android:hint="@string/bedroom_hint"
+
                             />
 
                         <ImageView
@@ -271,7 +271,7 @@
                             android:maxLines="1"
                             android:id="@+id/spec_bathroom"
                             android:backgroundTint="@color/black"
-                            android:hint="@string/bathroom_hint"
+
                             />
                     </TableRow>
 
@@ -296,7 +296,7 @@
                             android:maxLines="1"
                             android:id="@+id/spec_buildingArea"
                             android:backgroundTint="@color/black"
-                            android:hint="@string/building_area_hint"
+
                             />
                         <TextView
                             style="@style/TextContent.BodyMedium.Gray"
@@ -326,7 +326,7 @@
                             android:id="@+id/spec_floor"
                             android:textColorHint="@color/black"
                             android:backgroundTint="@color/black"
-                            android:hint="@string/floor_hint"
+
                             />
                         <ImageView
                             android:layout_width="30dp"
@@ -345,7 +345,7 @@
                             android:maxLines="1"
                             android:textColorHint="@color/black"
                             android:backgroundTint="@color/black"
-                            android:hint="@string/year_hint" />
+                             />
                     </TableRow>
                 </TableLayout>
             </ScrollView>

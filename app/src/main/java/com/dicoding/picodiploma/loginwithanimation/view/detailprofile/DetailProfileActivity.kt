@@ -80,7 +80,6 @@ class DetailProfileActivity : AppCompatActivity(),
                 Picasso.get()
                     .load(imageUrl)
                     .placeholder(R.drawable.ic_capture)
-                    .error(R.drawable.logo)
                     .into(binding.imageProfile, object : Callback {
                         override fun onSuccess() {
                             Log.d("Picasso", "Image loaded successfully")

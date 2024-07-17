@@ -54,8 +54,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation ("com.google.android.gms:play-services-base:17.6.0")
 
-
-
     // Image View
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.makeramen:roundedimageview:2.3.0")
